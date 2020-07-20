@@ -28,9 +28,15 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * counter1 uses a closure, counter2 does not.
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ * counter1 uses a closure, you can tell because there is a function used inside of a function.
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * 
+ * counter1 is preferable in instances where you do not want 'count' to be reset each time the function is executed.
  *
 */
 
@@ -56,11 +62,16 @@ function counter2() {
 
 Write a function called `inning` that returns a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
+function inning(){
 
-    /*Code Here*/
+    const homePoints = Math.floor(Math.random()*2);
+    const awayPoints = Math.floor(Math.random()*2);
+    return homePoints, awayPoints
+   
 
 }
+
+console.log(inning())
 
 /* Task 3: finalScore()
 
@@ -76,11 +87,24 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(inning, length){
+for(i = 0; i < length; i++){
+  function inning(){
 
-  /*Code Here*/
+    const homePoints = Math.floor(Math.random()*2);
+    const awayPoints = Math.floor(Math.random()*2);
 
-}
+    const score = {
+      home: homePoints,
+      away: awayPoints
+      }
+     inning()
+     return score
+    }     // closes inning function
+  }     // closes for loop
+}     // closes finalScore function
+
+console.log(finalScore(inning, 9))
 
 /* Task 4: 
 
@@ -103,8 +127,8 @@ and returns the score at each pont in the game, like so:
 Final Score: awayTeam - homeTeam */
 
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard() {
+  
 }
 
 
