@@ -63,8 +63,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+return function(){ is the closure, I can tell because it is a function inside of another function.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
-c. What is the lexical scope of `newRoll`? 
+
+What is the same is that Dan will roll a random number, what could change is the number that he rolls.
+
+c. What is the lexical scope of `newRoll`?
+
+function personalDice(name){
 
 ### Task 2c - Exit Ticket
 
