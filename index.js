@@ -127,8 +127,26 @@ and returns the score at each pont in the game, like so:
 Final Score: awayTeam - homeTeam */
 
 
-function scoreboard() {
+function scoreboard(finalScore, inning, length) {
+
+  function finalScore(inning, length){
+    for(i = 0; i < length; i++){
+      function inning(){
+    
+        const homePoints = Math.floor(Math.random()*2);
+        const awayPoints = Math.floor(Math.random()*2);
+    
+        const score = {
+          home: homePoints,
+          away: awayPoints
+          }
+         inning()
+         return score
+        }     // closes inning function
+      }     // closes for loop
+    }     // closes finalScore function
   
 }
 
+console.log(scoreboard(finalScore, inning, 9))
 
